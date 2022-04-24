@@ -1,0 +1,37 @@
+version: '3'
+
+volumes:
+  dados:
+
+
+
+services:
+  db-post:
+    image: postgres:13.1-alpine
+    container_name: db-post
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_USER=compose-postgres
+    volumes:
+      # VOlume dos dados
+      - dados:/var/lib/postgres/data
+      #Volume dos Scripts
+      - ./scripts:/scripts
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./scripts/customPostgresql.conf:/etc/postgresql.conf
+      - ./scripts/customPostgresql.conf:/usr/share/postgresql/postgresql.conf.sample
+      - ./scripts/customPostgresql.conf:/usr/share/postgresql/postgresql.conf
+    ports:
+      - 5432:5432
+
+  app:
+    build: ./api
+    container_name: app
+    ports:
+      - 8080:8080
+    depends_on:
+      - db-post
+    environment:
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    volumes:
+      - ./app:/app
