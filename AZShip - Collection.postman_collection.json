@@ -1,0 +1,268 @@
+{
+	"info": {
+		"_postman_id": "3c6576bc-b5c9-4285-bba7-d7ce4f04c614",
+		"name": "AZShip - Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Listar Clientes - GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/clientes/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Veiculos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"placa\":\"\",\n    \"veiculo\":\"4000\",\n    \"capacidade\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/veiculos/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Veiculo by ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/veiculos/2",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastrar Veiculo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"placa\":\"JGP8T77\",\n    \"descricao\":\"Scania v100 -2012\",\n    \"capacidade\": \"25000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/veiculos/",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"veiculos",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by id Cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/clientes/5",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"clientes",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  by id Cliente Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{HOST}}/api/clientes/3",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"clientes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Antonio Silva\",\n    \"email\":\"ASMendade@gmail.com\",\n    \"telefone\":\"61 98499841\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/clientes",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Frete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cliente\":\"5\",\n    \"veiculo\":\"2\",\n    \"tipo\":\"P\",\n    \"carga\":[\n        {\n            \"descricao\":\"Pallete Aparelho Televisor\",\n            \"valor\":\"5000\",\n            \"seguro\":\"true\",\n            \"peso\":\"\",\n            \"largura\":\"2\",\n            \"profundidade\":\"2\",\n            \"altura\":\"2\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/fretes",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"fretes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"nome\":\"Sr. Fulano de Tal 2 \",\n    \"email\":\"fulano@gmail.com\",\n    \"telefone\":\"61 98499841\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/clientes/2",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Fretes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cliente\":\"\"\n    ,\"veiculo\":\"\"\n    ,\"carga\":\"\"\n    ,\"placa\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{HOST}}/api/fretes",
+					"host": [
+						"{{HOST}}"
+					],
+					"path": [
+						"api",
+						"fretes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
