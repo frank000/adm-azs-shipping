@@ -18,3 +18,42 @@ Fazer o clone do projeto e iniciar o projeto:
   docker-compose up --build
 ```
     
+
+## Documentação da API
+
+#### Retorna todos os clientes
+
+```http
+  GET /api/clientes
+```
+
+
+#### Retorna um cliente
+
+```http
+  GET /api/clientes/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
+
+
+
+#### Retorna todos os veiculos
+
+```http
+  GET /api/veiculos
+```
+
+
+#### Retorna um veiculos
+
+```http
+  GET /api/veiculos/${id}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `string` | **Obrigatório**. O ID do item que você quer |
+
