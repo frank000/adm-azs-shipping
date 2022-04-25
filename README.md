@@ -42,7 +42,17 @@ Fazer o clone do projeto e iniciar o projeto:
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `string` | **Obrigatório**. O ID do item que você quer |
 
+#### Cadastrar um cliente
 
+```http
+  POST /api/clientes/
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `nome`      | `string` | **Obrigatório**. Nome do cliente |
+| `email`      | `string` | **Obrigatório**. Email do cliente |
+| `telefone`      | `string` | **Obrigatório**. Telefone do cliente |
 
 #### Retorna todos os veiculos
 
@@ -62,17 +72,7 @@ Fazer o clone do projeto e iniciar o projeto:
 | `id`      | `string` | **Obrigatório**. O ID do item que você quer |
 
 
-#### Cadastrar um cliente
 
-```http
-  POST /api/clientes/
-```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `nome`      | `string` | **Obrigatório**. Nome do cliente |
-| `email`      | `string` | **Obrigatório**. Email do cliente |
-| `telefone`      | `string` | **Obrigatório**. Telefone do cliente |
 
 #### Listar Fretes
 
