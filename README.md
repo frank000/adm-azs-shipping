@@ -86,3 +86,26 @@ Fazer o clone do projeto e iniciar o projeto:
 | `veiculo`      | `string` | **Opcional**. Descrição veículo responsável pelo frete  |
 | `carga`      | `string` | **Opcional**. Descrição da carga |
 | `placa`      | `string` | **Opcional**. Placa do veiculo responsável do frete |
+
+#### Cadastrar um Frete
+
+```http
+  POST /api/fretes/
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `cliente`      | `string` | **Obrigatório**. ID do cliente |
+| `veiculo`      | `string` | **Obrigatório**. ID do veículo |
+| `tipo`      | `char` | **Obrigatório**. "P" = PESO, "C" = CUBAGEM, "N" = NÃO SE APLICA |
+| `carga`      | `array` | **Obrigatório**. KEY-VALUES da tabela abaixo |
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `descricao`      | `string` | **Obrigatório**. Descrição do objeto da carga |
+| `valor`      | `string` | **Obrigatório**. Valor do objeto |
+| `seguro`      | `boolean` | **Obrigatório**. Se tem seguro ou não |
+| `peso`      | `string` | **Opcional**. Peso do objeto |
+| `largura`      | `string` | **Opcional**. Largura do objeto em metros|
+| `profundidade`      | `string` | **Opcional**. Profundidade do objeto em metros |
+| `altura`      | `string` | **Opcional**. Altura do objeto em metro |
