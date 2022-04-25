@@ -2,6 +2,11 @@
 
 Aplicação REST Java + Spring + PostgreSQL para listagem, consulta, cadastro e deleção de clientes, veiculo, carga e frete.
 
+## Autores
+
+- [@franklimpaulino](https://www.github.com/frank000)
+
+
 
 ## Instalação
 
