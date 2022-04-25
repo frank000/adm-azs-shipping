@@ -2,6 +2,10 @@
 
 Aplicação REST Java + Spring + PostgreSQL para listagem, consulta, cadastro e deleção de clientes, veiculo, carga e frete.
 
+### Arquivo de auxilio ao teste:
+
+- [Collection do Postman com Endpoints + paramentros](https://github.com/frank000/adm-azs-shipping/blob/master/AZShip%20-%20Collection.postman_collection.json)
+
 ## Autores
 
 - [@franklimpaulino](https://www.github.com/frank000)
